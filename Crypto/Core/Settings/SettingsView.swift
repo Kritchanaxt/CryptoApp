@@ -12,7 +12,6 @@ import SwiftUI
 struct SettingsView: View {
     
     let defaultURL = URL(string: "https://www.google.com")! // ลิงก์ไปยังหน้าหลักของ Google.
-    let youtubeURL = URL(string: "https://www.youtube.com/c/swiftfulthinking")! //  ลิงก์ไปยังช่อง YouTube ของ Swiftful Thinking.
     let linkinURL = URL(string: "https://www.linkedin.com/in/kritchanat-malaikwan-153374284/")!
     let coingeckoURL = URL(string: "https://www.coingecko.com")! // ลิงก์ไปยังเว็บไซต์ CoinGecko.
     let githubURL = URL(string: "https://github.com/Kritchanaxt")!
@@ -64,13 +63,11 @@ extension SettingsView {
                     .resizable()
                     .frame(width: 100, height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                Text("This app was made by following a @SwiftfulThinking course on YouTube. It uses MVVM Architecture, Combine, and CoreData!")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundColor(Color.theme.accent)
             }
             .padding(.vertical)
-            Link("Subscribe on YouTube ☕️", destination: youtubeURL)
             Link("LinkIn me 😱 ", destination: linkinURL)
         }
     }
